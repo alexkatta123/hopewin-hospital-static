@@ -1,0 +1,313 @@
+/* Specialities.css */
+
+.speciality-section {
+    margin-bottom: 60px;
+}
+
+/* 4-Column Grid Layout */
+.specialities-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.dept-card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    border: 1px solid #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    scroll-margin-top: 130px;
+    /* Offset for sticky header */
+}
+
+.dept-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-color);
+}
+
+.service-img-container {
+    height: 180px;
+    overflow: hidden;
+    background: #f9f9f9;
+    position: relative;
+}
+
+.service-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.dept-card:hover .service-img-container img {
+    transform: scale(1.1);
+}
+
+.service-content {
+    padding: 15px;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.service-content h3 {
+    color: var(--secondary-blue);
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.4;
+    height: 2.8em;
+    /* Fixed height for title alignment */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Buttons Section */
+.card-actions {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btn-action {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 8px 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 1px solid transparent;
+}
+
+.btn-details {
+    background: transparent;
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+.btn-details:hover {
+    background: var(--secondary-color);
+    color: white;
+}
+
+.btn-book {
+    background: var(--primary-teal);
+    color: white;
+}
+
+.btn-book:hover {
+    background: #008c86;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Placeholder Style */
+.placeholder-service {
+    width: 100%;
+    height: 100%;
+    background: #eef2f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-teal);
+    font-weight: 800;
+    opacity: 0.5;
+}
+
+.placeholder-service span {
+    border: 3px solid var(--primary-teal);
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 1.5rem;
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: 20px;
+}
+
+.modal-content {
+    background: white;
+    width: 600px;
+    max-width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+    animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--secondary-color);
+    z-index: 10;
+    transition: background 0.2s;
+}
+
+.modal-close:hover {
+    background: white;
+    color: red;
+}
+
+.modal-header-img {
+    height: 250px;
+    width: 100%;
+    background: #f0f0f0;
+}
+
+.modal-header-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    color: #ccc;
+    font-weight: bold;
+}
+
+.modal-body {
+    padding: 30px;
+}
+
+.modal-body h2 {
+    color: var(--secondary-blue);
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+.modal-desc {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.modal-highlights {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+.modal-highlights h4 {
+    margin-bottom: 10px;
+    color: var(--primary-teal);
+}
+
+.modal-highlights ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.modal-highlights ul li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    color: #444;
+}
+
+.modal-highlights ul li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: var(--primary-teal);
+    font-size: 0.9rem;
+}
+
+.modal-footer-actions {
+    text-align: right;
+}
+
+/* Responsiveness */
+@media (max-width: 1200px) {
+    .specialities-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .specialities-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .specialities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-actions {
+        flex-direction: column;
+    }
+
+    .modal-content {
+        width: 95%;
+        max-height: 95vh;
+    }
+
+    .modal-header-img {
+        height: 180px;
+    }
+
+    .modal-body {
+        padding: 20px;
+    }
+
+    .modal-body h2 {
+        font-size: 1.4rem;
+    }
+}

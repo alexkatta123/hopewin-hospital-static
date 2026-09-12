@@ -1,0 +1,267 @@
+/* Existing Styles remain same, adding new ones for button selection */
+.feedback-page {
+    padding: 80px 0;
+    min-height: 80vh;
+    background-color: var(--bg-light-blue);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.feedback-container {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 800px;
+    /* Increased width to accommodate grid of buttons better */
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.feedback-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.feedback-header h2 {
+    color: var(--secondary-blue);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.feedback-header p {
+    color: var(--text-gray);
+}
+
+.feedback-form .form-group {
+    margin-bottom: 25px;
+}
+
+.feedback-form label {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.feedback-form input,
+.feedback-form select,
+.feedback-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+.feedback-form input:focus,
+.feedback-form select:focus,
+.feedback-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-teal);
+    box-shadow: 0 0 0 3px rgba(0, 160, 153, 0.1);
+}
+
+/* Service Selection Buttons Grid */
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.service-btn {
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+    color: #555;
+    font-family: inherit;
+}
+
+.service-btn:hover {
+    background-color: #eee;
+    transform: translateY(-1px);
+}
+
+.service-btn.selected {
+    background-color: var(--primary-teal);
+    color: white;
+    border-color: var(--primary-teal);
+    box-shadow: 0 2px 5px rgba(0, 160, 153, 0.3);
+}
+
+.star-rating {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.star-rating button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 28px;
+    color: #ffd700;
+    transition: transform 0.2s;
+    padding: 0;
+}
+
+.star-rating button.inactive {
+    color: #e0e0e0;
+}
+
+.star-rating button:hover {
+    transform: scale(1.1);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--primary-teal);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #008c85;
+    transform: translateY(-2px);
+}
+
+.success-message {
+    text-align: center;
+    padding: 30px;
+    color: var(--primary-teal);
+}
+
+.success-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.error-text {
+    color: #dc3545;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* Reviews Section */
+.reviews-section {
+    margin-top: 0;
+    /* Managed by inline style or parent layout */
+    padding-top: 20px;
+}
+
+.reviews-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.review-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f0f0f0;
+    transition: transform 0.2s;
+}
+
+.review-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.reviewer-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar-placeholder {
+    width: 40px;
+    height: 40px;
+    background: #e3f2fd;
+    color: var(--secondary-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reviewer-info h4 {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--secondary-blue);
+}
+
+.review-date {
+    font-size: 0.8rem;
+    color: #999;
+    display: flex;
+    align-items: center;
+}
+
+.review-service-tag {
+    display: inline-block;
+    background: rgba(0, 160, 153, 0.1);
+    color: var(--primary-teal);
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.review-comment {
+    color: #555;
+    font-style: italic;
+    line-height: 1.5;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+    .reviews-list {
+        grid-template-columns: 1fr;
+    }
+
+    .review-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}

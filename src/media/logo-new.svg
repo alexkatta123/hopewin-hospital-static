@@ -1,0 +1,21 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="100" cy="100" r="95" stroke="#FFA500" stroke-width="4" fill="white"/>
+  <circle cx="100" cy="100" r="5" fill="#FFA500"/>
+  <!-- Sun Rays -->
+  <path d="M100 100 L100 10 M100 100 L160 20 M100 100 L190 100 M100 100 L160 180 M100 100 L100 190 M100 100 L40 180 M100 100 L10 100 M100 100 L40 20" stroke="#FFD700" stroke-width="2"/>
+  
+  <!-- Trophy Cup -->
+  <path d="M70 70 Q70 130 100 130 Q130 130 130 70 L130 50 L70 50 Z" fill="#FFD700" stroke="#DAA520" stroke-width="2"/>
+  <rect x="95" y="130" width="10" height="20" fill="#DAA520"/>
+  <rect x="80" y="150" width="40" height="10" fill="#DAA520"/>
+  <path d="M70 60 C50 60 50 100 70 100" fill="none" stroke="#DAA520" stroke-width="3"/>
+  <path d="M130 60 C150 60 150 100 130 100" fill="none" stroke="#DAA520" stroke-width="3"/>
+
+  <!-- Text -->
+  <text x="100" y="40" font-family="serif" font-weight="bold" font-size="20" text-anchor="middle" fill="#000080">HOPE WIN HOSPITALS</text>
+  <text x="100" y="180" font-family="sans-serif" font-size="10" text-anchor="middle" fill="#000">Nurturing Hope to Win Love...</text>
+
+  <!-- Medical Symbol -->
+  <circle cx="100" cy="145" r="15" fill="white" stroke="black"/>
+  <path d="M100 135 L100 155 M95 140 L105 150 M105 140 L95 150" stroke="green" stroke-width="2"/>
+</svg>

@@ -1,0 +1,128 @@
+:root {
+  /* Exact Colors from Vikaas Hospitals Screenshot */
+  --primary-teal: #00a099;
+  /* The main teal color in top bar and logo icon */
+  --secondary-blue: #0e4d68;
+  /* The dark blue text "VIKAAS HOSPITALS" */
+  --accent-orange: #f37021;
+  /* The orange accent in "Caring with Compassion" */
+  --bg-light-blue: #ebf7f8;
+  /* The light blue background in hero */
+  --text-dark: #333333;
+  --text-gray: #666666;
+  --white: #ffffff;
+
+  --font-primary: 'Inter', sans-serif;
+  /* Clean sans-serif like the reference */
+  --container-width: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scrollbar-width: none !important; /* Firefox */
+  -ms-overflow-style: none !important; /* IE 10+ and Edge */
+}
+
+*::-webkit-scrollbar {
+  display: none !important; /* Chrome, Safari and Opera */
+  width: 0px !important;
+  height: 0px !important;
+  background: transparent !important;
+}
+
+html, body {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+  font-family: var(--font-primary);
+  color: var(--text-dark);
+  background-color: var(--white);
+  overflow-x: hidden;
+}
+
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none !important;
+  width: 0px !important;
+  height: 0px !important;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Social Icons Colors */
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: white;
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.social-fb {
+  background-color: #3b5998;
+}
+
+.social-insta {
+  background-color: #E1306C;
+}
+
+.social-linkedin {
+  background-color: #0077b5;
+}
+
+.social-youtube {
+  background-color: #ff0000;
+}
+
+.social-x {
+  background-color: #000000;
+}
+
+/* WhatsApp Float */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  font-size: 30px;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
